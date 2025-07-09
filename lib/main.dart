@@ -43,7 +43,7 @@ class MyWidget extends StatelessWidget {
         "Welcome to my app!",
         style: TextStyle(
           fontSize: 20.0,
-          color: const Color.fromARGB(255, 14, 68, 113),
+          color: const Color.fromARGB(255, 10, 70, 118),
         ),
         textAlign: TextAlign.center,
       ),
