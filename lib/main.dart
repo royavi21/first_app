@@ -39,14 +39,41 @@ class MyWidget extends StatelessWidget {
         backgroundColor: const Color.fromARGB(17, 82, 172, 245),
         centerTitle: true,
       ),
-      body: Text(
-        "Welcome to my app!",
-        style: TextStyle(
-          fontSize: 20.0,
-          color: const Color.fromARGB(255, 10, 70, 118),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Center(
+          child: Card(
+            elevation: 10.0,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+            // ignore: deprecated_member_use
+            shadowColor: Colors.blueAccent.withOpacity(0.5),
+            child: const Padding(
+              padding: EdgeInsets.all(24),
+              child: Column(
+                mainAxisSize:
+                    MainAxisSize.min, // Add this to shrink-wrap the card
+                children: [
+                  Text(
+                    "Welcome to my app!!!!",
+                    style: TextStyle(
+                      fontSize: 26,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(height: 20), // Add some space between text and image
+                  // Replace with your image asset
+                  Image(image: AssetImage('assets/logo.png')),
+                ],
+              ),
+            ),
+          ),
         ),
-        textAlign: TextAlign.center,
       ),
     );
   }
 }
+
